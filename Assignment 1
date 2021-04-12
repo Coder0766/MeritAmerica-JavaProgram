@@ -1,0 +1,47 @@
+public class KarelDefendsDemocracy extends SuperKarel {
+
+	public void run() {
+		while (frontIsClear()) {
+			move();
+	
+//Move Karel in position to count ballots
+			
+		if (!beepersPresent()) {
+			cleanChad();
+			move();
+			
+//If Beeper/Ballot is present have Karel clean			
+
+			
+		if (beepersPresent()) {
+			pickBeeper();
+			facingNorth();
+			facingEast();
+			move();
+			}
+	
+			}
+		}
+	}
+
+	private void cleanChad() {
+		// TODO Auto-generated method stub
+		turnRight();
+		move();
+		turnLeft();
+		move();
+		}
+
+	private void ballotcard() { 
+		//check for ballots to the right and left of Karel
+		move();
+		
+	
+	while (beepersPresent()) {
+		pickBeeper();
+	}
+		turnAround();
+		move();
+	}
+}
+
