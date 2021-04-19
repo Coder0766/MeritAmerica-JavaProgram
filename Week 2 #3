@@ -1,0 +1,49 @@
+package week2;
+
+	/*
+	 * File: RandomCircles.java
+	 *-------------------------
+	 *This program uses RandomGenerator to produce Circles
+	 *various size and color.	
+	 */
+	
+	import acm.program.GraphicsProgram;// needed for graphic program
+	import acm.program.*; //needed for executables
+	import acm.graphics.*;//needed for drawing graphics
+	import acm.util.*;// needed in the use of pseudorandom values
+
+	public class RandomCircles extends GraphicsProgram {
+	
+	//Constant value geometric formulas	
+		
+	 private static final int xCIRCLES = 8;
+	 private static final double MIN_RADIUS = 11;
+	 private static final double MAX_RADIUS = 27;
+	
+	//method that creates random generator object
+	
+	private RandomGenerator regen= new RandomGenerator(); {
+	}
+	
+	//For loop iterating through xCircles
+
+	 public void run() {
+	 for (int i = 0; i < xCIRCLES; i++) { 
+	
+	RandomGenerator rgen;
+	//generates random double precision real number	 
+	 double r = regen.nextDouble(MIN_RADIUS, MAX_RADIUS);
+	 double x = regen.nextDouble(0, getWidth() - 2 * r);
+	 double y = regen.nextDouble(0, getHeight() - 2 * r);
+	 
+	 //Formatted output of Oval construct with fill & color
+	 	 
+	 GOval circle = new GOval(x, y, 2 * r, 2 * r);
+	 circle.setFilled(true);
+	 circle.setColor(regen.nextColor());
+	 add(circle);
+	 }
+	 
+	 
+	 } 
+}	 
