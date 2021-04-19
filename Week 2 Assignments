@@ -1,0 +1,34 @@
+package week2;
+
+import acm.program.*;
+
+public class Fibonacci extends ConsoleProgram {
+	
+	public static final int SENTINEL=10000;
+	
+	public void run() {
+
+// declare primitive Variable
+		
+		int fib1 = 0;
+		int fib2 = 1;
+		int fib  = fib1 + fib2;
+
+//iterate value of Fibonacci through a do while loop
+		
+//set them equal to n value the increments sequentially
+		
+//print sequence
+						
+		do {
+			println (fib);	
+			fib1 = fib2;
+			fib2 = fib;
+			fib = fib1 + fib2;	
+		} 	while (fib < SENTINEL);
+	
+
+
+	}
+	
+}
