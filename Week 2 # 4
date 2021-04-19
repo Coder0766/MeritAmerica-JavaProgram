@@ -1,0 +1,39 @@
+	
+		/* File: RubberBanding.java
+		 * -----------------------
+		 * This program draws a line using a mouse and utilizes rubber-banding
+		 */
+
+
+		import acm.program.GraphicsProgram;
+		import acm.graphics.GLine;
+		import acm.program.*;
+		import java.awt.event.*;
+
+		
+		public class RubberBanding extends GraphicsProgram {
+		public void run() {
+		 addMouseListeners();
+		 }
+		 
+		//coordinate on canvas detected
+		 
+		public void mousePressed(MouseEvent e) {
+		double x = e.getX();
+		double y = e.getY();
+		line = new GLine(x, y, x, y);
+		 add(line);
+		 }
+		 
+		//endPoint (y) detected
+		 
+		public void mouseDragged(MouseEvent e) {
+		double x = e.getX();
+	    double y = e.getY();
+		line.setEndPoint(x, y);
+		 }
+		 
+		//Variable instantiated
+		 
+		 private GLine line;
+	}
