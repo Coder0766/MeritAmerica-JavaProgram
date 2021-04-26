@@ -76,3 +76,19 @@ Heap                Stack
                     x           1000     FFB8
  1080
                     r           1000     FFC0
+
+
+----------------------------------------------------
+Mystery.java
+
+witch: x = 1, y = 1
+witch: x = 10, y = 0
+witch: x = 101, y = 1
+witch: x = 1011, y = 1
+witch: x = 13, y = 1011
+witch: x = 1, y = 1
+
+
+
+
+
