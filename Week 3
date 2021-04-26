@@ -1,0 +1,78 @@
+/*
+ * File: removeAllOccurrences.java
+ * ------------------------------
+ * This program removes all occurrences of the character "ch" from the string.
+ * 
+ */
+
+package removeAllOccurrences;
+
+		public class removeAllOccurrences {
+
+
+		public String removeAllOccurrences(String str, char ch) {
+		String result  = "What chapter are you on?";
+		for ( int i = 0; i < str.length(); i++) {
+			if ( str.charAt(i) !=ch) {
+				result += str.charAt(i);
+			}
+		}
+	
+		return result;
+}
+		}
+    
+    
+    
+   -------------------------------------------------- 
+    
+    
+import acm.program.ConsoleProgram;
+
+public class AddCommasToNumberString extends ConsoleProgram {
+	
+	//method add 
+	/* public void run() {	
+		while (true) {
+			String digits = readLine("Enter a numeric string:  ");
+			if (digits.length() == 0) break;
+			println (addCommasToNumberString (digits));}
+		}
+	}
+		
+		private Object addCommasToNumberString(String digits) {
+		// TODO Auto-generated method stub
+		return null;
+	
+		private String addCommasToNumericString(num);{
+		if (str.charAt(-2) / 2 % 3; ++1; (",")); {
+		println();	
+		}
+	}
+		*/
+	
+	public String addCommasToNumericString(String digits) {
+	    String result = "";
+	    for (int i=1; i <= digits.length(); ++i) {
+	        char ch = digits.charAt(digits.length() - i);
+	        if (i % 3 == 1 && i > 1) {
+	            result = "," + result;
+	        }
+	        result = ch + result;
+	    }
+
+	    return result;
+	}
+  
+  
+  
+  -----------------------------------
+  
+  
+Heap                Stack
+ 1020               i           3        FFBO
+                    result      1080     FFB4
+ ---> garbage       n           3        FFB8
+                    x           1000     FFB8
+ 1080
+                    r           1000     FFC0
